@@ -2,15 +2,10 @@ package br.com.etechoracio.monitoria.dto;
 
 import java.util.List;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Null;
 import javax.validation.constraints.Size;
-import javax.validation.executable.ValidateOnExecution;
-
-import br.com.etechoracio.monitoria.model.Disciplina;
-import br.com.etechoracio.monitoria.model.Disponibilidade;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,9 +22,9 @@ public class UsuarioDTO {
 	@Null
 	@Size(max=200)
 	private String avatar;
-	
-	//"+55 | 11955555555"
+
 	@NotNull
+	@NotBlank
 	@Size(min=11, max=14)
 	private String whatsapp;
 	
